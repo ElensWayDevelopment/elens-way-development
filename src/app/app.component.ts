@@ -31,24 +31,22 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       'hamburger-4',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/hamburger-4.svg'
+        './assets/hamburger-4.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'arrow-bottom-right',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/arrow-bottom-right.svg'
+        './assets/arrow-bottom-right.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'instagram',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/instagram.svg'
-      )
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/instagram.svg')
     );
     this.matIconRegistry.addSvgIcon(
       'telegram',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/telegram.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/telegram.svg')
     );
   }
   menuItems = [
