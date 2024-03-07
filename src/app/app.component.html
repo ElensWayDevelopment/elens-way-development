@@ -6,7 +6,7 @@
     </div>
     <div class="drawer-content">
       @for (menuItem of menuItems; track menuItem) {
-        <div class="menu-item">
+        <div class="menu-item" (click)="navigateToLink(menuItem)">
           <span class="menu-title">{{ menuItem.name }}</span>
           <mat-icon svgIcon="arrow-bottom-right"></mat-icon>
         </div>
@@ -14,8 +14,8 @@
     </div>
     <div class="footer-content">
       @for (footerItem of footerItems; track footerItem) {
-        <div class="footer-item">
-          <mat-icon [svgIcon]="footerItem.iconName"></mat-icon>
+        <div class="footer-item" (click)="navigateToLink(footerItem)">
+          <mat-icon [svgIcon]="footerItem.iconName || ''"></mat-icon>
           <span class="footer-title">{{ footerItem.name }}</span>
         </div>
       }

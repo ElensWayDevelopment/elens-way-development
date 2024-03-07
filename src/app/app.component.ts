@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { RouterOutlet } from '@angular/router';
+import { NavigationItemWithLink } from './main-page.types';
 
 @Component({
   selector: 'app-root',
@@ -49,7 +50,7 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/telegram.svg')
     );
   }
-  menuItems = [
+  menuItems: NavigationItemWithLink[] = [
     {
       name: 'Консультации',
       link: '/'
@@ -61,7 +62,7 @@ export class AppComponent {
     },
     {
       name: `YouTube-канал`,
-      link: '/'
+      link: 'https://www.youtube.com/@elens_way'
     },
     {
       name: `Портал психологов
@@ -74,16 +75,22 @@ export class AppComponent {
     }
   ];
 
-  footerItems = [
+  footerItems: NavigationItemWithLink[] = [
     {
       name: '@elens_way',
-      link: '/',
+      link: 'https://www.instagram.com/elens_way/',
       iconName: 'instagram'
     },
     {
       name: '@elens_way',
-      link: '/',
+      link: 'https://t.me/elens_way',
       iconName: 'telegram'
     }
   ];
+
+  navigateToLink(linkItem: NavigationItemWithLink): void {
+    if (!linkItem.isRouterNavigation) {
+      window.open(linkItem.link, '_blank');
+    }
+  }
 }
