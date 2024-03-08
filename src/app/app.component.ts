@@ -54,6 +54,10 @@ export class AppComponent {
       'telegram',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/telegram.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'youtube',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/youtube.svg')
+    );
   }
   menuItems: NavigationItemWithLink[] = [
     {
@@ -63,7 +67,8 @@ export class AppComponent {
     {
       name: `Подкаст
       «Ты — это важно»`,
-      link: '/'
+      link: '/podcast',
+      isRouterNavigation: true
     },
     {
       name: `YouTube-канал`,

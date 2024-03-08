@@ -7,9 +7,12 @@
     class="sidenaw"
     mode="over"
     position="end"
+    [autoFocus]="false"
     [fixedInViewport]="true">
     <div class="sidenaw-header">
-      <span>Елена Мицкевич</span>
+      <h2 class="toolbar-title" [routerLink]="'/'" (click)="sidenav.close()">
+        Елена Мицкевич
+      </h2>
       <mat-icon class="close-icon" (click)="sidenav.close()">close</mat-icon>
     </div>
     <div class="sidenaw-content">
@@ -32,7 +35,9 @@
   <mat-sidenav-content>
     <div>
       <mat-toolbar color="primary" class="toolbar">
-        <h1 class="toolbar-title" [routerLink]="'/'">Елена Мицкевич</h1>
+        <h1 class="toolbar-title" [routerLink]="'/'">
+          Елена Мицкевич
+        </h1>
         <mat-icon
           class="menu-icon"
           svgIcon="hamburger-4"
