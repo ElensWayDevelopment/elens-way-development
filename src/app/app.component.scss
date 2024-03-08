@@ -12,12 +12,12 @@
 
 .drawer {
   width: 400px;
-  padding: 0px 0px 45px 0px;
+  padding: 0px;
   background-color: #f9f4eb;
 
   @media (max-width: 480px) {
     width: 100%;
-  }
+      }
 
   .drawer-header {
     display: flex;
@@ -57,6 +57,7 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
+    padding-bottom: 45px;
 
     .footer-item {
       padding: 0px 45px;
