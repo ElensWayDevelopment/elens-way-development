@@ -14,7 +14,7 @@
     </div>
     <div class="sidenaw-content">
       @for (menuItem of menuItems; track menuItem) {
-        <div class="menu-item" (click)="navigateToLink(menuItem)">
+        <div class="menu-item" (click)="navigateToLink(menuItem, sidenav)">
           <span class="menu-title">{{ menuItem.name }}</span>
           <mat-icon svgIcon="arrow-bottom-right"></mat-icon>
         </div>
@@ -22,7 +22,7 @@
     </div>
     <div class="footer-content">
       @for (footerItem of footerItems; track footerItem) {
-        <div class="footer-item" (click)="navigateToLink(footerItem)">
+        <div class="footer-item" (click)="navigateToLink(footerItem, sidenav)">
           <mat-icon [svgIcon]="footerItem.iconName || ''"></mat-icon>
           <span class="footer-title">{{ footerItem.name }}</span>
         </div>
@@ -32,7 +32,7 @@
   <mat-sidenav-content>
     <div>
       <mat-toolbar color="primary" class="toolbar">
-        <h1 class="toolbar-title">Елена Мицкевич</h1>
+        <h1 class="toolbar-title" [routerLink]="'/'">Елена Мицкевич</h1>
         <mat-icon
           class="menu-icon"
           svgIcon="hamburger-4"

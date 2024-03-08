@@ -2,12 +2,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationItemWithLink } from './main-page.types';
 
 @Component({
@@ -31,7 +31,8 @@ import { NavigationItemWithLink } from './main-page.types';
 export class AppComponent {
   constructor(
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private router: Router
   ) {
     this.matIconRegistry.addSvgIcon(
       'hamburger-4',
@@ -71,7 +72,8 @@ export class AppComponent {
     {
       name: `Портал психологов
       «Ты — это важно»`,
-      link: '/'
+      link: '/portals',
+      isRouterNavigation: true
     },
     {
       name: 'Командные тренинги',
@@ -92,9 +94,13 @@ export class AppComponent {
     }
   ];
 
-  navigateToLink(linkItem: NavigationItemWithLink): void {
+  navigateToLink(linkItem: NavigationItemWithLink, sidenav: MatSidenav): void {
     if (!linkItem.isRouterNavigation) {
       window.open(linkItem.link, '_blank');
+    } else {
+      this.router.navigate([linkItem.link]);
     }
+
+    sidenav.close();
   }
 }
