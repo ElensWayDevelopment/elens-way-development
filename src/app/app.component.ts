@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
+import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationItemWithLink } from './main-page.types';
 
@@ -19,7 +20,9 @@ import { NavigationItemWithLink } from './main-page.types';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    CommonModule,
+    MatSidenavModule
   ],
   providers: [MatIconRegistry],
   templateUrl: './app.component.html',

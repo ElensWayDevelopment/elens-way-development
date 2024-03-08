@@ -1,10 +1,18 @@
-<mat-drawer-container class="page-container" [hasBackdrop]="true">
-  <mat-drawer #drawer class="drawer" mode="over" position="end">
-    <div class="drawer-header">
+<mat-sidenav-container
+  class="page-container"
+  [hasBackdrop]="true"
+  [ngStyle]="{ position: sidenav.opened ? 'fixed' : 'relative' }">
+  <mat-sidenav
+    #sidenav
+    class="sidenaw"
+    mode="over"
+    position="end"
+    [fixedInViewport]="true">
+    <div class="sidenaw-header">
       <span>Елена Мицкевич</span>
-      <mat-icon class="close-icon" (click)="drawer.close()">close</mat-icon>
+      <mat-icon class="close-icon" (click)="sidenav.close()">close</mat-icon>
     </div>
-    <div class="drawer-content">
+    <div class="sidenaw-content">
       @for (menuItem of menuItems; track menuItem) {
         <div class="menu-item" (click)="navigateToLink(menuItem)">
           <span class="menu-title">{{ menuItem.name }}</span>
@@ -20,15 +28,17 @@
         </div>
       }
     </div>
-  </mat-drawer>
-  <mat-drawer-content>
-    <mat-toolbar color="primary" class="toolbar">
-      <h1 class="toolbar-title">Елена Мицкевич</h1>
-      <mat-icon
-        class="menu-icon"
-        svgIcon="hamburger-4"
-        (click)="drawer.toggle()"></mat-icon>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div>
+      <mat-toolbar color="primary" class="toolbar">
+        <h1 class="toolbar-title">Елена Мицкевич</h1>
+        <mat-icon
+          class="menu-icon"
+          svgIcon="hamburger-4"
+          (click)="sidenav.toggle()"></mat-icon>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

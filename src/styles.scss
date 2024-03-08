@@ -23,7 +23,9 @@ $elens-way-theme: mat.define-light-theme(
 
 body {
   margin: 0px;
-  --mat-icon-color: #374709
+  position: static;
+  overflow-y: auto; 
+  --mat-icon-color: #374709;
 }
 
 * {
@@ -32,4 +34,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #374709;
+}
+
+.mdc-button {
+  background-color: #374709 !important;
+  height: 56px !important;
+  border-radius: 15px !important;
+
+  .mdc-button__label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400px;
+  }
 }
