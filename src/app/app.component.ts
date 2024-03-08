@@ -6,7 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationItemWithLink } from './main-page.types';
 
 @Component({
@@ -18,7 +18,8 @@ import { NavigationItemWithLink } from './main-page.types';
     RouterOutlet,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [MatIconRegistry],
   templateUrl: './app.component.html',
