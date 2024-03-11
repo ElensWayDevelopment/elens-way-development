@@ -54,7 +54,13 @@
     </p>
     <p class="additional-section-text">И я могу вам помочь.</p>
 
-    <button mat-button class="action-button">Записаться на консультацию</button>
+    <button
+      mat-button
+      class="action-button"
+      routerLink=""
+      fragment="consultation">
+      Записаться на консультацию
+    </button>
   </div>
 
   <div class="additional-section additional-section__sand" id="podcast">
@@ -174,7 +180,7 @@
       (click)="openLink('https://importantmental.ru/')">
       Найти своего психолога
     </button>
-    <div style="display: inline; margin-top: 10px">
+    <div style="display: inline; margin-top: 10px; width: 100%">
       <span class="additional-section-text additional-section-text__colored">
         Я отобрала 12 чутких и профессиональных психологов, которые:
       </span>
@@ -279,7 +285,13 @@
       </li>
     </ul>
 
-    <button mat-button class="action-button">Записаться на консультацию</button>
+    <button
+      mat-button
+      class="action-button"
+      routerLink=""
+      fragment="consultation">
+      Записаться на консультацию
+    </button>
 
     <div class="image-container">
       <img src="./assets/plant.jpeg" alt="Plant" class="image" />
@@ -344,7 +356,7 @@
     </button>
   </div>
 
-  <div class="additional-section" id="consultation">
+  <div class="additional-section" id="groupTrainings">
     <div style="display: inline; text-align: left; padding: 20px 25px 0px 25px">
       <span class="additional-section-title">
         Групповое обучение для вашего бизнеса и команды</span
@@ -367,5 +379,100 @@
     <button mat-button class="action-button" style="margin: 20px 0px">
       Записаться на консультацию
     </button>
+  </div>
+
+  <div class="additional-section additional-section__green" id="portals">
+    <div style="display: inline; text-align: center">
+      <span class="additional-section-title"> Моё образование </span>
+    </div>
+    <div class="image-container">
+      <img src="./assets/elena-5.jpeg" alt="Elena's photo" class="image" />
+    </div>
+    <div style="display: inline; margin-top: 15px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Федеральный институт переподготовки</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Нейропсихолог</li>
+      <li>Практический психолог</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Ассоциация Когнитивно-Поведенческой терапии</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Базовый курс когнитивно-поведенческой терапии</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Московский институт психоанализа</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Экзистенциальная психология личности</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Московский гештальт институт</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Московский гештальт институт</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Высшая экономическая школа</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Курс медиации и переговоров</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Международный центр «Креативные технологии консалтинга»</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Тренер эмоционального интеллекта</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Интегративный институт гештальт тренинга</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Работа со сложными чувствами</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 20px; width: 100%">
+      <span class="additional-section-text__colored"
+        >Институт практической психологии Иматон</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Клиническая психология</li>
+      <li>Работа с депрессивными состояниями</li>
+      <li>Работа с травмой привязанности</li>
+      <li>
+        Mindfulness — развитие осознанности и повышение стрессоустойчивости
+      </li>
+      <li>Работа с конфликтами в семье</li>
+    </ul>
   </div>
 </div>

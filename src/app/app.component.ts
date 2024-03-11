@@ -71,7 +71,8 @@ export class AppComponent {
   menuItems: NavigationItemWithLink[] = [
     {
       name: 'Консультации',
-      link: ''
+      link: 'consultation',
+      isRouterNavigation: true
     },
     {
       name: `Подкаст
@@ -91,7 +92,8 @@ export class AppComponent {
     },
     {
       name: 'Командные тренинги',
-      link: ''
+      link: 'groupTrainings',
+      isRouterNavigation: true
     }
   ];
 
