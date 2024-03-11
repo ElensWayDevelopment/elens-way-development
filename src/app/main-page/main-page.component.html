@@ -14,7 +14,7 @@
 </p>
 
 <div class="additional-section-container">
-  <div class="additional-section">
+  <div class="additional-section additional-section__red">
     <p class="additional-section-title">Я психолог</p>
     <p class="additional-section-text">
       Наш мир динамичен и изменчив. И сохранить в себе чувство спокойствия,
@@ -55,5 +55,269 @@
     <p class="additional-section-text">И я могу вам помочь.</p>
 
     <button mat-button class="action-button">Записаться на консультацию</button>
+  </div>
+
+  <div class="additional-section additional-section__sand" id="podcast">
+    <div style="display: inline; text-align: center">
+      <span class="additional-section-title"> Я автор подкаста </span>
+    </div>
+    <p
+      class="additional-section-text additional-section-text__no-margin-bottom">
+      Я не знаю, как именно мы с вами познакомились. Возможно, через мой блог
+      или публичные выступления. В таком случае, я предлагаю послушать вам мой
+      подкаст «Ты — это важно» на любой открытой площадке. 
+    </p>
+    <div class="image-container">
+      <img src="./assets/elena-4.jpeg" alt="Elena's photo" class="image" />
+    </div>
+
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://elens-way.mave.digital/')">
+      Слушать подкаст
+    </button>
+    <p class="additional-section-text">
+      Вот уже 3 года он помогает сотням тысяч людей. Журнал Forbes отметил его в
+      <a
+        href="https://www.forbes.ru/forbeslife/449263-drevnerusskie-biznesmeny-i-tajny-genetiki-12-lucsih-novyh-podkastov-na-russkom-azyke"
+        target="_blank"
+        >подборке лучших новых подкастов 2021 года</a
+      >, а в 2023 году получил признание от Яндекс музыки, попав в
+      <a
+        href="https://music.yandex.ru/non-music/editorial/album/top100_allpodcasts"
+        target="_blank"
+        >рейтинг 100 лучших подкастов за все времена</a
+      >.
+    </p>
+    <p class="additional-section-text">
+      Больше 100 выпусков помогут вам познакомиться со своими чувствамии
+      мыслями, негативными глубинными установками, научиться распознавать
+      когнитивные искажения и не насиловать себя позитивом. А истории гостей —
+      дадут чувство опоры, что вы в этом мире не одни и помогут ощутить, каждая
+      история —это очень важно.
+    </p>
+    <p class="additional-section-text">
+      А с 2024 года подкаст выходит и на ютубе, где вы также найдете
+      поддерживающий контент.
+    </p>
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://www.youtube.com/@elens_way')">
+      Смотреть подкаст
+      <mat-icon svgIcon="youtube" class="youtube-icon"></mat-icon>
+    </button>
+
+    <div class="image-container">
+      <img
+        src="./assets/bottles.jpeg"
+        alt="Happines in the bottel"
+        class="image" />
+    </div>
+
+    <div style="display: inline; width: 100%; margin-top: 5px">
+      <span class="additional-section-text__colored"> О подкасте в СМИ:</span>
+    </div>
+
+    <ul class="bullet-list">
+      <li class="list-link">
+        <a href="https://thecity.m24.ru/articles/6133" target="_blank"
+          >СИТИ: <br />Слушаем и успокаиваемся: <br />10 подкастов, помогающих
+          справиться с тревожностью</a
+        >
+      </li>
+      <li class="list-link">
+        <a
+          href="https://peopletalk.ru/article/10-luchshih-resursov-o-psihologii-podkasty-telegram-kanaly-i-instagram-akkaunty/amp/"
+          target="_blank"
+          >PEOPLE TALK:<br />10 лучших ресурсов о психологии</a
+        >
+      </li>
+      <li class="list-link">
+        <a
+          href="https://vc.ru/media/435426-100-populyarnyh-podkastov-na-russkom-iyun-2022-kakie-podkasty-poslushat"
+          target="_blank"
+          >VC.RU:<br />100 популярных подкастов на русском, июнь 2022. Какие
+          подкасты послушать?</a
+        >
+      </li>
+      <li class="list-link">
+        <a
+          href="https://thenoisetier.com/blog/3-podcasts-about-self-love-world-and-awkward-situations"
+          target="_blank"
+          >NOISETIER:<br />3 подкаста о любви к себе, мире <br />и неловких
+          ситуациях</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="additional-section additional-section__green" id="portals">
+    <div style="display: inline; text-align: center">
+      <span class="additional-section-title">
+        Я предприниматель, автор своего проекта
+      </span>
+    </div>
+    <div class="image-container">
+      <img src="./assets/elena-2.jpeg" alt="Elena's photo" class="image" />
+    </div>
+    <p class="additional-section-text additional-section-text__white">
+      Я понимаю, что найти своего психолога непросто. Поэтому 2 года назад в
+      продолжение своего подкаста я создала портал адекватной информации и
+      психологов «Ты — это важно».
+    </p>
+
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://importantmental.ru/')">
+      Найти своего психолога
+    </button>
+    <div style="display: inline; margin-top: 10px">
+      <span class="additional-section-text additional-section-text__colored">
+        Я отобрала 12 чутких и профессиональных психологов, которые:
+      </span>
+
+      <p
+        class="additional-section-text additional-section-text__white additional-section-text__left">
+        — постоянно повышают квалификацию<br />
+        — проходят как личную терапию, так и супервизию<br />
+        — разделяют со мной видение адекватной психотерапии<br />
+        — разделяют мои ценности — бережности, любви и тепла.<br />
+      </p>
+    </div>
+    <mat-icon
+      style="width: 70px; height: 70px; margin: 5px 0px"
+      svgIcon="arrow-handwrite" />
+    <p class="additional-section-text additional-section-text__white">
+      Мы позаботились о вас еще на моменте знакомства, поэтому вы можете
+      посмотреть
+      <a
+        href="https://importantmental.ru/"
+        target="_blank"
+        style="color: #ffffff"
+        >видеовизитки каждого специалиста, послушать голос, форму мышления, а
+        также почитать статьи или посмотреть эфиры.</a
+      >
+    </p>
+    <p class="additional-section-text additional-section-text__white">
+      Информация, которую мы создаем с коллегами в любом случае будет вам
+      полезна!
+    </p>
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://importantmental.ru/')">
+      Познакомиться с порталом
+    </button>
+  </div>
+
+  <div class="additional-section additional-section__red">
+    <div style="display: inline; text-align: center">
+      <span class="additional-section-title">
+        Я психолог, <br />
+        тренер по развитию эмоционального интеллекта и коммуникациям
+      </span>
+    </div>
+
+    <div class="image-container">
+      <img src="./assets/elena-3.jpeg" alt="Elena's photo" class="image" />
+    </div>
+
+    <div style="display: inline; margin-top: 5px; width: 100%">
+      <span class="additional-section-text__colored">
+        И индивидуально я помогаю <br />
+        с отношениями с собой, когда:</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>Тревожно, зажато, страшно <br />и неуверенно внутри</li>
+      <li>Трудоголизм — ваша проблема</li>
+      <li>Потерялись смыслы и внутренние опоры </li>
+      <li>
+        Нет умения чувствовать свое тело <br />и адекватно его воспринимать
+      </li>
+      <li>А доброта к себе проявляется, только если…</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 40px; width: 100%">
+      <span class="additional-section-text__colored">
+        Я помогаю с отношениями с близкими, когда:</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>
+        Воспоминания о детстве доставляют боль и не понятно, как общаться со
+        взрослыми родителями
+      </li>
+      <li>Близость и тревожна, и желанна но отношения строить сложно</li>
+      <li>Нет свободы и навыков выражатьсвои эмоции и справляться с ними</li>
+    </ul>
+
+    <div style="display: inline; margin-top: 40px; width: 100%">
+      <span class="additional-section-text__colored">
+        Я помогаю  проявлением себя в мир, когда:</span
+      >
+    </div>
+
+    <ul class="bullet-list">
+      <li>
+        Хочется финансово расти, <br />
+        но не упахиваться
+      </li>
+      <li>
+        Есть понимание, что с командой <br />
+        и партнерами – это тоже отношения
+      </li>
+      <li>Тревожно выстроить позиционирование себя в бизнесе и блогинге</li>
+      <li>
+        Хочется ярко, но этично говорить <br />
+        о сложном и прокачать навыки коммуникации
+      </li>
+    </ul>
+
+    <button mat-button class="action-button">Записаться на консультацию</button>
+
+    <div class="image-container">
+      <img src="./assets/plant.jpeg" alt="Plant" class="image" />
+    </div>
+
+    <p class="additional-section-text">
+      Я работаю в интегративном подходе, сочетая техники
+      когнитивно-поведенческой психотерапии, эмоционального интеллекта,
+      гештальт-терапии, экзистенциальной психологии, подходя к каждому человеку
+      индивидуально.
+    </p>
+
+    <div style="display: inline; margin-top: 40px; width: 100%">
+      <span class="additional-section-text__colored"> При этом:</span>
+    </div>
+
+    <ul class="bullet-list">
+      <li class="list-link">
+        Я не работаю с людьми, которых привели родственники или замотивировали
+        друзья
+      </li>
+      <li class="list-link">
+        Я не смогу проделать всю работу за вас: психолог не выступает в роли
+        спасателя. Но я буду рядом и помогу найти оптимальное решение на вашем
+        жизненном пути
+      </li>
+      <li class="list-link">
+        Всё то, чем вы делитесь, остается конфиденциально в рамках нашей
+        коммуникации
+      </li>
+      <li class="list-link">
+        Вся моя работа направлена на улучшение вашего состояния
+      </li>
+      <li class="list-link">
+        Поэтому я постоянно повышаю уровень своих знаний, прохожу супервизию и
+        сама нахожусь в непрерывной личной психотерапии. На сегодняшний день мой
+        опыт более 600 часов
+      </li>
+    </ul>
   </div>
 </div>

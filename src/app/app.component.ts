@@ -6,7 +6,7 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationItemWithLink } from './main-page.types';
 
@@ -32,7 +32,8 @@ export class AppComponent {
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private viewport: ViewportScroller
   ) {
     this.matIconRegistry.addSvgIcon(
       'hamburger-4',
@@ -58,16 +59,24 @@ export class AppComponent {
       'youtube',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/youtube.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'arrow-handwrite',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        './assets/arrow-handwrite.svg'
+      )
+    );
+
+    viewport.setOffset([0, 100]);
   }
   menuItems: NavigationItemWithLink[] = [
     {
       name: 'Консультации',
-      link: '/'
+      link: ''
     },
     {
       name: `Подкаст
       «Ты — это важно»`,
-      link: '/podcast',
+      link: 'podcast',
       isRouterNavigation: true
     },
     {
@@ -77,12 +86,12 @@ export class AppComponent {
     {
       name: `Портал психологов
       «Ты — это важно»`,
-      link: '/portals',
+      link: 'portals',
       isRouterNavigation: true
     },
     {
       name: 'Командные тренинги',
-      link: '/'
+      link: ''
     }
   ];
 
@@ -103,7 +112,7 @@ export class AppComponent {
     if (!linkItem.isRouterNavigation) {
       window.open(linkItem.link, '_blank');
     } else {
-      this.router.navigate([linkItem.link]);
+      this.router.navigate([''], { fragment: linkItem.link });
     }
 
     sidenav.close();
