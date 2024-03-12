@@ -24,7 +24,7 @@ $elens-way-theme: mat.define-light-theme(
 body {
   margin: 0px;
   position: static;
-  overflow-y: auto; 
+  overflow-y: auto;
   --mat-icon-color: #374709;
 }
 
@@ -45,5 +45,130 @@ body {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400px;
+  }
+}
+
+.image-container {
+  width: 100%;
+  margin: 30px 0px 14px 0px;
+  max-width: 500px;
+
+  &__with-padding {
+    padding: 30px 30px 14px 30px;
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 30px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    box-shadow: 0px 4px 40px 0px #37470933;
+  }
+}
+
+.colored-card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 40px 0px #0000001a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+
+  &__green {
+    background-color: #759242;
+  }
+
+  &__red {
+    background-color: #e1c3b8;
+  }
+
+  &__sand {
+    background-color: #f9f4eb;
+  }
+
+  &__no-radius {
+    border-radius: 0px;
+  }
+}
+
+.colored-card-title-wraper {
+  display: inline;
+  text-align: center;
+  margin: 20px 0px 0px;
+}
+
+.colored-card-title {
+  margin: 0px;
+  font-size: 30px;
+  font-weight: 800;
+  background-color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+
+  &__align-left {
+    text-align: left;
+  }
+}
+
+.action-button {
+  margin: 40px 0px 20px 0px;
+  width: 100%;
+}
+
+.colored-card-text {
+  text-align: justify;
+
+  &__with-background {
+    background-color: #ffffff;
+  }
+
+  &__white {
+    color: #ffffff;
+  }
+
+  &__align-left {
+    text-align: left;
+  }
+
+  &__without-top-margin {
+    margin-top: 0px;
+  }
+
+  &__without-bottom-margin {
+    margin-bottom: 0px;
+  }
+
+  &__without-margin {
+    margin: 0px;
+  }
+
+  &__bold {
+    font-weight: 500;
+  }
+}
+
+.inline-wrapper {
+  display: inline;
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+
+  &__margin-top {
+    margin-top: 10px;
+  }
+}
+
+ul {
+  padding-left: 30px;
+}
+
+.li-with-offset {
+  margin-top: 1.5em;
+
+  &:first-child {
+    margin-top: 0px;
   }
 }

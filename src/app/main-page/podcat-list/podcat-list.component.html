@@ -1,0 +1,24 @@
+<div div class="colored-card colored-card__sand">
+  <div class="colored-card-title-wraper">
+    <span class="colored-card-title"
+      >Часть подкастов, в которых я принимала участие как гость</span
+    >
+  </div>
+
+  <div class="podcast-list">
+    @for (podcast of podcastList; track podcast) {
+      <div class="podcast-card">
+        <p class="colored-card-text card-title">
+          {{ podcast.name }}
+        </p>
+
+        <div class="card-image-container" (click)="openLink(podcast.url)">
+          <div class="play-icon-container">
+            <mat-icon svgIcon="play" class="play-icon"></mat-icon>
+          </div>
+          <img class="card-image" [src]="podcast.image" [alt]="podcast.name" />
+        </div>
+      </div>
+    }
+  </div>
+</div>

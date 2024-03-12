@@ -65,6 +65,10 @@ export class AppComponent {
         './assets/arrow-handwrite.svg'
       )
     );
+    this.matIconRegistry.addSvgIcon(
+      'play',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/play.svg')
+    );
 
     viewport.setOffset([0, 100]);
   }

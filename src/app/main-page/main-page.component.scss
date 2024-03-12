@@ -31,24 +31,6 @@
   }
 }
 
-.image-container {
-  width: 100%;
-  padding: 30px 0px 14px 0px;
-
-  &__with-padding {
-    padding: 30px 30px 14px 30px;
-    max-width: 500px;
-  }
-
-  .image {
-    width: 100%;
-    border-radius: 30px;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    box-shadow: 0px 4px 40px 0px #37470933;
-  }
-}
-
 .sub-title {
   width: min-content;
   padding: 0px 30px;
@@ -72,86 +54,5 @@
   gap: 10px;
   padding: 10px;
   margin-bottom: 10px;
-
-  .additional-section {
-    border-radius: 15px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 40px 0px #0000001a;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-    max-width: 500px;
-
-    &__green {
-      background-color: #759242;
-    }
-
-    &__red {
-      background-color: #e1c3b8;
-    }
-
-    &__sand {
-      background-color: #f9f4eb;
-    }
-
-    .additional-section-title {
-      margin: 0px;
-      font-size: 30px;
-      font-weight: 800;
-      background-color: #ffffff;
-      margin-top: 30px;
-    }
-
-    .bullet-list {
-      padding-inline-start: 25px;
-      width: 100%;
-    }
-
-    .list-link {
-      margin-top: 30px;
-      font-size: 16px;
-      font-weight: 400;
-
-      &:first-of-type {
-        margin-top: 0px;
-      }
-    }
-
-    .extra-questions {
-      display: flex;
-      flex: 1;
-      align-items: start;
-      flex-direction: column;
-      width: 100%;
-      gap: 3px;
-    }
-
-    .additional-section-text {
-      width: 100%;
-      text-align: justify;
-      font-size: 16px;
-      font-weight: 400;
-
-      &__left {
-        text-align: left;
-      }
-
-      &__white {
-        color: #ffffff;
-      }
-
-      &__colored {
-        max-width: 100%;
-        font-weight: 500;
-        text-align: left;
-        background-color: #ffffff;
-      }
-    }
-
-    .action-button {
-      margin: 36px 0px;
-      width: 100%;
-    }
-  }
+  width: 100%;
 }
