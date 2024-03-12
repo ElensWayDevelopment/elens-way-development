@@ -3,7 +3,7 @@
   <span class="quote">Я — то, чем я решил стать»</span>
   <span class="quote-name">Карл Юнг</span>
 </div>
-<div class="image-container image-container__with-padding">
+<div class="image-container image-container__with-padding initial-image">
   <img src="./assets/elena-1.jpeg" alt="Elena's Photo" class="image" />
 </div>
 
@@ -24,3 +24,18 @@
   <app-education></app-education>
   <app-podcat-list></app-podcat-list>
 </div>
+
+<p class="media-title">
+  И чтобы не прощаться, приглашаю вас в мои социальные сети:
+</p>
+
+<div class="media-content">
+  @for (footerItem of footerItems; track footerItem) {
+    <div class="media-item" (click)="openLink(footerItem.link)">
+      <mat-icon class="media-icon" [svgIcon]="footerItem.iconName || ''"></mat-icon>
+      <span class="media-sub-title">{{ footerItem.name }}</span>
+    </div>
+  }
+</div>
+
+<app-footer></app-footer>

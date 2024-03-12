@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px;
+}
+
+.footer-container {
+  background-color: #d8a39b;
+}
+
+.simple-text {
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.bold-text {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}

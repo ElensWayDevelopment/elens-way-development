@@ -10,6 +10,8 @@ import { IndividualConsultationsComponent } from './individual-consultations/ind
 import { GroupConsultationComponent } from './group-consultation/group-consultation.component';
 import { EducationComponent } from './education/education.component';
 import { PodcatListComponent } from './podcat-list/podcat-list.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavigationItemWithLink } from '../main-page.types';
 
 @Component({
   selector: 'app-main-page',
@@ -25,13 +27,27 @@ import { PodcatListComponent } from './podcat-list/podcat-list.component';
     IndividualConsultationsComponent,
     GroupConsultationComponent,
     EducationComponent,
-    PodcatListComponent
+    PodcatListComponent,
+    FooterComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainPageComponent {
+  footerItems: NavigationItemWithLink[] = [
+    {
+      name: '@elens_way',
+      link: 'https://www.instagram.com/elens_way/',
+      iconName: 'instagram'
+    },
+    {
+      name: '@elens_way',
+      link: 'https://t.me/elens_way',
+      iconName: 'telegram'
+    }
+  ];
+
   openLink(link: string): void {
     window.open(link, '_self');
   }

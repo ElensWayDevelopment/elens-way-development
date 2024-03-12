@@ -26,7 +26,9 @@
     <div class="footer-content">
       @for (footerItem of footerItems; track footerItem) {
         <div class="footer-item" (click)="navigateToLink(footerItem, sidenav)">
-          <mat-icon [svgIcon]="footerItem.iconName || ''"></mat-icon>
+          <mat-icon
+            class="footer-icon"
+            [svgIcon]="footerItem.iconName || ''"></mat-icon>
           <span class="footer-title">{{ footerItem.name }}</span>
         </div>
       }
