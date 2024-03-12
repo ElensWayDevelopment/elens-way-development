@@ -13,6 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class GroupConsultationComponent {
   openLink(link: string): void {
-    window.open(link, '_blank');
+    window.open(link);
   }
 }

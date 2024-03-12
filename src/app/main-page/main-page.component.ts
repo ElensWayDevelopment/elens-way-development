@@ -33,6 +33,6 @@ import { PodcatListComponent } from './podcat-list/podcat-list.component';
 })
 export class MainPageComponent {
   openLink(link: string): void {
-    window.open(link, '_blank');
+    window.open(link);
   }
 }
