@@ -13,6 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class PortalComponent {
   openLink(link: string): void {
-    window.open(link);
+    window.open(link, '_self');
   }
 }

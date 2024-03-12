@@ -116,7 +116,7 @@ export class AppComponent {
 
   navigateToLink(linkItem: NavigationItemWithLink, sidenav: MatSidenav): void {
     if (!linkItem.isRouterNavigation) {
-      window.open(linkItem.link);
+      window.open(linkItem.link, '_self');
     } else {
       this.router.navigate([''], { fragment: linkItem.link });
     }
