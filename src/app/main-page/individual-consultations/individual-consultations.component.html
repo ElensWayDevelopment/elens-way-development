@@ -1,6 +1,21 @@
-<div class="colored-card">
-  <span class="colored-card-title text-with-offset"
+<div class="colored-card" [ngClass]="{ 'desktop-card': isDesktop }">
+  <span
+    class="colored-card-title colored-card-text__without-margin text-with-offset text-with-offset__left"
     >Индивидуальное консультирование</span
+  >
+
+  <p
+    class="colored-card-text colored-card-text__without-bottom-margin text-with-offset">
+    <u>Я помогу:</u>
+  </p>
+  <span class="colored-card-text text-with-offset"
+    >— с отношениями с собой</span
+  >
+  <span class="colored-card-text text-with-offset"
+    >— с отношениями с близкими
+  </span>
+  <span class="colored-card-text text-with-offset"
+    >— с проявлением себя в мир</span
   >
 
   <ul class="price-list">
@@ -16,6 +31,7 @@
   <button
     mat-button
     class="action-button"
+    [ngClass]="{ 'desktop-action-button': isDesktop }"
     (click)="openLink('https://t.me/elena_mitskevich')">
     Записаться на консультацию
   </button>

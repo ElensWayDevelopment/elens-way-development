@@ -1,5 +1,17 @@
 :host {
-  display: block;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  @media only screen and (min-width: 1280px) {
+    height: 740px;
+  }
+}
+
+.desktop-card {
+  padding: 30px 30px;
+  height: 100%;
 }
 
 .price-list {
@@ -8,7 +20,20 @@
   width: 100%;
 }
 
+.desktop-action-button {
+  margin-top: auto;
+}
+
 .text-with-offset {
   padding: 0px 15px;
   text-align: left;
+
+  &__left {
+    text-align: left;
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 27px;
+      font-weight: 700px;
+    }
+  }
 }

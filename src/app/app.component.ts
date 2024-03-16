@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
@@ -9,6 +9,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavigationItemWithLink } from './main-page.types';
+import {
+  BreakpointObserver,
+  BreakpointState,
+  LayoutModule
+} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -22,18 +27,22 @@ import { NavigationItemWithLink } from './main-page.types';
     HttpClientModule,
     RouterModule,
     CommonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LayoutModule
   ],
   providers: [MatIconRegistry],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  isDesktop = false;
+
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
     private router: Router,
-    private viewport: ViewportScroller
+    private viewport: ViewportScroller,
+    private breakpointObserver: BreakpointObserver
   ) {
     this.matIconRegistry.addSvgIcon(
       'hamburger-4',
@@ -69,6 +78,12 @@ export class AppComponent {
       'play',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/play.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'arrow-right',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        './assets/arrow-right.svg'
+      )
+    );
 
     viewport.setOffset([0, 100]);
   }
@@ -76,27 +91,32 @@ export class AppComponent {
     {
       name: 'Консультации',
       link: 'consultation',
+      shortName: 'Консультации',
       isRouterNavigation: true
     },
     {
       name: `Подкаст
       «Ты — это важно»`,
       link: 'podcast',
+      shortName: 'Подкаст',
       isRouterNavigation: true
     },
     {
       name: `YouTube-канал`,
+      shortName: 'YouTube-канал',
       link: 'https://www.youtube.com/@elens_way'
     },
     {
       name: `Портал психологов
       «Ты — это важно»`,
       link: 'portals',
+      shortName: 'Портал',
       isRouterNavigation: true
     },
     {
       name: 'Командные тренинги',
       link: 'groupTrainings',
+      shortName: 'Тренинги',
       isRouterNavigation: true
     }
   ];
@@ -113,6 +133,14 @@ export class AppComponent {
       iconName: 'telegram'
     }
   ];
+
+  ngOnInit() {
+    this.breakpointObserver
+      .observe(['(min-width: 1280px)'])
+      .subscribe((state: BreakpointState) => {
+        this.isDesktop = state.matches;
+      });
+  }
 
   navigateToLink(linkItem: NavigationItemWithLink, sidenav: MatSidenav): void {
     if (!linkItem.isRouterNavigation) {

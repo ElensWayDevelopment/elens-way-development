@@ -1,28 +1,96 @@
-<div class="quote-block">
-  <span class="quote">«Я не то, что со мной случилось.</span>
-  <span class="quote">Я — то, чем я решил стать»</span>
-  <span class="quote-name">Карл Юнг</span>
-</div>
-<div class="image-container image-container__with-padding initial-image">
-  <img src="./assets/elena-1.jpeg" alt="Elena's Photo" class="image" />
-</div>
+@if (!isDesktop) {
+  <div class="quote-block">
+    <span class="quote">«Я не то, что со мной случилось.</span>
+    <span class="quote">Я — то, чем я решил стать»</span>
+    <span class="quote-name">Карл Юнг</span>
+  </div>
+  <div class="image-container image-container__with-padding initial-image">
+    <img src="./assets/elena-1.jpeg" alt="Elena's Photo" class="image" />
+  </div>
 
-<span class="sub-title">Елена Мицкевич</span>
-<p class="sub-title-info">
-  Практикующий психолог, <br />Тренер по развитию эмоционального интеллекта и
-  коммуникациям, <br />Предприниматель, автор подкаста
-</p>
+  <span class="sub-title">Елена Мицкевич</span>
+  <p class="sub-title-info">
+    Практикующий психолог, <br />Тренер по развитию эмоционального интеллекта и
+    коммуникациям, <br />Предприниматель, автор подкаста
+  </p>
+} @else {
+  <div class="top-info">
+    <div class="image-container image-container__with-padding initial-image">
+      <img src="./assets/elena-1.jpeg" alt="Elena's Photo" class="image" />
+    </div>
+
+    <div class="colored-card small-paddings">
+      <div class="quote-block">
+        <span class="quote">«Я не то, что со мной случилось.</span>
+        <span class="quote">Я — то, чем я решил стать»</span>
+        <span class="quote-name">Карл Юнг</span>
+      </div>
+
+      <span class="main-name"
+        >Елена<br />
+        Мицкевич</span
+      >
+
+      <div class="about-me">
+        <div class="me-row">
+          <div class="me-item">
+            <mat-icon svgIcon="arrow-right" class="arrow-right"></mat-icon>
+            Практикующий психолог
+          </div>
+
+          <div class="me-item">
+            <mat-icon svgIcon="arrow-right" class="arrow-right"></mat-icon>
+            Предприниматель
+          </div>
+        </div>
+
+        <div class="me-row">
+          <div class="me-item">
+            <mat-icon svgIcon="arrow-right" class="arrow-right"></mat-icon>
+            Тренер по развитию<br />
+            эмоционального интеллекта <br />и коммуникациям
+          </div>
+
+          <div class="me-item">
+            <mat-icon svgIcon="arrow-right" class="arrow-right"></mat-icon>
+            Автор подкаста
+          </div>
+        </div>
+      </div>
+
+      <button
+        mat-button
+        class="action-button no-margin-bottom margin-top-auto"
+        routerLink=""
+        fragment="consultation">
+        Записаться на консультацию
+      </button>
+    </div>
+  </div>
+}
 
 <div class="additional-section-container">
-  <app-psychologist></app-psychologist>
-  <app-podcast id="podcast"></app-podcast>
-  <app-portal id="portals"></app-portal>
-  <app-about-therapy></app-about-therapy>
-  <app-individual-consultations
-    id="consultation"></app-individual-consultations>
-  <app-group-consultation id="groupTrainings"></app-group-consultation>
-  <app-education></app-education>
-  <app-podcat-list></app-podcat-list>
+  <app-psychologist [isDesktop]="isDesktop"></app-psychologist>
+  <app-podcast id="podcast" [isDesktop]="isDesktop"></app-podcast>
+  <app-portal id="portals" [isDesktop]="isDesktop"></app-portal>
+  <app-about-therapy [isDesktop]="isDesktop"></app-about-therapy>
+  <div class="consultation-block">
+    <app-individual-consultations
+      id="consultation"
+      [isDesktop]="isDesktop"></app-individual-consultations>
+    <app-group-consultation
+      id="groupTrainings"
+      [isDesktop]="isDesktop"></app-group-consultation>
+    @if (isDesktop) {
+      <app-group-consultation
+        id="mediate"
+        [isDesktop]="isDesktop"
+        [mediate]="true"></app-group-consultation>
+    }
+  </div>
+
+  <app-education [isDesktop]="isDesktop"></app-education>
+  <app-podcat-list [isDesktop]="isDesktop"> </app-podcat-list>
 </div>
 
 <p class="media-title">
@@ -32,7 +100,9 @@
 <div class="media-content">
   @for (footerItem of footerItems; track footerItem) {
     <div class="media-item" (click)="openLink(footerItem.link)">
-      <mat-icon class="media-icon" [svgIcon]="footerItem.iconName || ''"></mat-icon>
+      <mat-icon
+        class="media-icon"
+        [svgIcon]="footerItem.iconName || ''"></mat-icon>
       <span class="media-sub-title">{{ footerItem.name }}</span>
     </div>
   }

@@ -1,69 +1,115 @@
-<div div class="colored-card colored-card__green">
-  <div class="colored-card-title-wraper">
-    <span class="colored-card-title"
-      >Я предприниматель, автор своего проекта</span
-    >
-  </div>
-
-  <div class="image-container">
-    <img src="./assets/elena-2.jpeg" alt="Elena's photo" class="image" />
-  </div>
-
-  <p
-    class="colored-card-text colored-card-text__white colored-card-text__without-bottom-margin">
-    Я понимаю, что найти своего психолога непросто. Поэтому 2 года назад в
-    продолжение своего подкаста я создала портал адекватной информации и
-    психологов «Ты — это важно».
-  </p>
-
-  <button
-    mat-button
-    class="action-button"
-    (click)="openLink('https://importantmental.ru/')">
-    Найти своего психолога
-  </button>
-
-  <div class="inline-wrapper sub-title">
-    <span class="colored-card-text colored-card-text__with-background"
-      >Я отобрала 12 чутких и профессиональных психологов, которые:</span
-    >
-  </div>
-
-  <p
-    class="colored-card-text colored-card-text__white colored-card-text__align-left">
-    — постоянно повышают квалификацию<br />
-    — проходят как личную терапию, так и супервизию<br />
-    — разделяют со мной видение адекватной психотерапии<br />
-    — разделяют мои ценности — бережности, любви и тепла.<br />
-  </p>
-
-  <mat-icon
-    style="width: 70px; height: 70px; margin: 5px 0px"
-    svgIcon="arrow-handwrite" />
-
-  <div>
-    <p class="colored-card-text colored-card-text__white">
-      Мы позаботились о вас еще на моменте знакомства, поэтому вы можете
-      посмотреть
-      <a
-        href="https://importantmental.ru/"
-        class="colored-card-text__white"
-        target="_self"
-        >видеовизитки каждого специалиста, послушать голос, форму мышления, а
-        также почитать статьи или посмотреть эфиры.</a
+<div
+  div
+  class="colored-card colored-card__green"
+  [ngClass]="isDesktop ? 'colored-card__red' : 'colored-card__green'">
+  @if (!isDesktop) {
+    <div class="colored-card-title-wraper">
+      <span class="colored-card-title"
+        >Я предприниматель, автор своего проекта</span
       >
-    </p>
+    </div>
+
+    <div class="image-container">
+      <img src="./assets/elena-2.jpeg" alt="Elena's photo" class="image" />
+    </div>
+
     <p
       class="colored-card-text colored-card-text__white colored-card-text__without-bottom-margin">
-      Информация, которую мы создаем с коллегами в любом случае будет вам
-      полезна!
+      Я понимаю, что найти своего психолога непросто. Поэтому 2 года назад в
+      продолжение своего подкаста я создала портал адекватной информации и
+      психологов «Ты — это важно».
     </p>
-  </div>
 
-  <button
-    mat-button
-    class="action-button"
-    (click)="openLink('https://importantmental.ru/')">
-    Познакомиться с порталом
-  </button>
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://importantmental.ru/')">
+      Найти своего психолога
+    </button>
+
+    <div class="inline-wrapper sub-title">
+      <span class="colored-card-text colored-card-text__with-background"
+        >Я отобрала 12 чутких и профессиональных психологов, которые:</span
+      >
+    </div>
+
+    <p
+      class="colored-card-text colored-card-text__white colored-card-text__align-left">
+      — постоянно повышают квалификацию<br />
+      — проходят как личную терапию, так и супервизию<br />
+      — разделяют со мной видение адекватной психотерапии<br />
+      — разделяют мои ценности — бережности, любви и тепла.<br />
+    </p>
+
+    <mat-icon class="arrow-handwrite-icon" svgIcon="arrow-handwrite" />
+
+    <div>
+      <p class="colored-card-text colored-card-text__white">
+        Мы позаботились о вас еще на моменте знакомства, поэтому вы можете
+        посмотреть
+        <a
+          href="https://importantmental.ru/"
+          class="colored-card-text__white"
+          target="_self"
+          >видеовизитки каждого специалиста, послушать голос, форму мышления, а
+          также почитать статьи или посмотреть эфиры.</a
+        >
+      </p>
+      <p
+        class="colored-card-text colored-card-text__white colored-card-text__without-bottom-margin">
+        Информация, которую мы создаем с коллегами в любом случае будет вам
+        полезна!
+      </p>
+    </div>
+
+    <button
+      mat-button
+      class="action-button"
+      (click)="openLink('https://importantmental.ru/')">
+      Познакомиться с порталом
+    </button>
+  } @else {
+    <div class="card-container">
+      <div class="colored-card-title-wraper card-title">
+        <span class="colored-card-title"
+          >Я автор своего проекта<br /><br />
+          и <br />предпри ниматель</span
+        >
+      </div>
+
+      <div class="image-container no-margin-top no-margin-bottom">
+        <img src="./assets/elena-2.jpeg" alt="Elena's photo" class="image" />
+      </div>
+
+      <div class="card-text">
+        <div>
+          <p class="colored-card-text no-margin-top">
+            Я понимаю, что найти своего психолога непросто. Поэтому 2 года назад
+            в продолжение своего подкаста я создала портал адекватной информации
+            и психологов <b>«Ты — это важно».</b>
+          </p>
+
+          <span class="colored-card-text"
+            ><b
+              >Я отобрала 12 чутких и профессиональных психологов, которые:</b
+            ></span
+          >
+
+          <p class="colored-card-text colored-card-text__align-left">
+            — постоянно повышают квалификацию<br />
+            — проходят как личную терапию, так и супервизию<br />
+            — разделяют со мной видение адекватной психотерапии<br />
+            — разделяют мои ценности — бережности, любви и тепла.<br />
+          </p>
+        </div>
+
+        <button
+          mat-button
+          class="action-button no-margin-bottom"
+          (click)="openLink('https://importantmental.ru/')">
+          Найти своего психолога
+        </button>
+      </div>
+    </div>
+  }
 </div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -11,4 +11,6 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './education.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EducationComponent {}
+export class EducationComponent {
+  @Input() isDesktop = true;
+}

@@ -1,9 +1,24 @@
 :host {
-  display: block;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .full-width {
   width: 100%;
+}
+
+.flex-wrapp-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.education-image {
+  @media only screen and (min-width: 1280px) {
+    margin-top: 40px;
+  }
 }
 
 .block-with-margin-top {
@@ -12,4 +27,46 @@
 
 .block-with-margin-bottom {
   margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  width: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  width: 380px;
+}
+
+.arrow-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.full-height {
+  height: calc(100% - 40px);
 }

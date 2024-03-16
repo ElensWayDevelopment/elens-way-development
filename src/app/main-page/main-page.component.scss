@@ -7,6 +7,28 @@
 
 .initial-image {
   margin-top: 0px;
+
+  @media only screen and (min-width: 1280px) {
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 0px;
+
+    .image {
+      border-radius: 15px;
+    }
+  }
+}
+
+.top-info {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 1120px;
+  padding-bottom: 16px;
+}
+
+.small-paddings {
+  padding: 50px 45px;
 }
 
 .quote-block {
@@ -17,6 +39,12 @@
   padding: 0px 30px;
   width: 100%;
 
+  @media only screen and (min-width: 1280px) {
+    height: max-content;
+    flex: none;
+    padding: 0px;
+  }
+
   .quote {
     max-width: 235px;
     width: max-content;
@@ -24,6 +52,12 @@
     text-align: right;
     font-size: 15px;
     font-weight: 400;
+
+    @media only screen and (min-width: 1280px) {
+      background-color: unset;
+      font-style: italic;
+      color: #759242;
+    }
   }
 
   .quote-name {
@@ -32,7 +66,44 @@
     text-align: right;
     font-size: 15px;
     font-weight: 400;
+
+    @media only screen and (min-width: 1280px) {
+      background-color: unset;
+      color: #759242;
+    }
   }
+}
+
+.arrow-right {
+  width: 16px;
+  min-width: 16px;
+}
+
+.about-me {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 35px;
+
+  .me-row {
+    display: flex;
+    justify-content: space-between;
+
+    .me-item {
+      display: flex;
+      gap: 10px;
+      width: 35%;
+
+      &:first-child {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.margin-top-auto {
+  margin-top: auto;
 }
 
 .sub-title {
@@ -59,6 +130,11 @@
   padding: 10px;
   margin-bottom: 40px;
   width: 100%;
+
+  @media only screen and (min-width: 1280px) {
+    padding: 0px 80px 10px 80px;
+    gap: 16px;
+  }
 }
 
 .media-title {
@@ -68,7 +144,13 @@
   text-align: left;
   padding: 0px 30px;
   margin: 0px;
+  width: 100%;
   max-width: 500px;
+
+  @media only screen and (min-width: 1280px) {
+    max-width: 1120px;
+    padding: 0px;
+  }
 }
 
 .media-content {
@@ -80,6 +162,11 @@
   max-width: 500px;
   padding: 0px 30px;
   margin: 30px 0px 70px 0px;
+
+  @media only screen and (min-width: 1280px) {
+    max-width: 1120px;
+    padding: 0px;
+  }
 
   .media-item {
     display: flex;
@@ -97,4 +184,28 @@
       height: 36px;
     }
   }
+}
+
+.consultation-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1120px;
+  }
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.main-name {
+  font-size: 80px;
+  font-weight: 800;
+  color: #759242;
 }

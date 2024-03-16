@@ -36,10 +36,23 @@ body {
   color: #374709;
 }
 
+svg {
+  color: var(--mat-icon-color);
+}
+
+path {
+  color: inherit;
+}
+
 .mdc-button {
   background-color: #374709 !important;
   height: 56px !important;
   border-radius: 15px !important;
+  transition: background-color 0.2s ease-out 100ms;
+
+  &:hover {
+    background-color: #759242 !important;
+  }
 
   .mdc-button__label {
     color: #ffffff;
@@ -52,6 +65,11 @@ body {
   width: 100%;
   margin: 30px 0px 14px 0px;
   max-width: 500px;
+
+  @media only screen and (min-width: 1280px) {
+    max-width: unset;
+    width: 380px;
+  }
 
   &__with-padding {
     padding: 30px 30px 14px 30px;
@@ -77,6 +95,12 @@ body {
   max-width: 500px;
   width: 100%;
 
+  @media only screen and (min-width: 1280px) {
+    max-width: 1120px;
+    align-items: start;
+    padding: 80px 56px;
+  }
+
   &__green {
     background-color: #759242;
   }
@@ -98,6 +122,14 @@ body {
   display: inline;
   text-align: center;
   margin: 20px 0px 0px;
+  width: 100%;
+
+  @media only screen and (min-width: 1280px) {
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0px;
+    max-width: 500px;
+  }
 }
 
 .colored-card-title {
@@ -107,6 +139,11 @@ body {
   background-color: #ffffff;
   margin-top: 20px;
   text-align: center;
+
+  @media only screen and (min-width: 1280px) {
+    background-color: unset;
+    max-width: 500px;
+  }
 
   &__align-left {
     text-align: left;
@@ -120,6 +157,7 @@ body {
 
 .colored-card-text {
   text-align: justify;
+  font-size: 18px;
   width: 100%;
 
   &__with-background {
