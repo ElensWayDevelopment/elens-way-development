@@ -46,7 +46,8 @@
 
   <button
     mat-button
-    class="action-button desktop-action-button"
+    [ngClass]="{ 'desktop-action-button': isDesktop }"
+    class="action-button"
     (click)="openLink('https://t.me/elena_mitskevich')">
     {{ mediate ? 'Обсудить проблемы и задачи' : ' Обсудить цели и условия' }}
   </button>
