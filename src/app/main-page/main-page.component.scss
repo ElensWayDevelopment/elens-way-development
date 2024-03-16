@@ -8,7 +8,7 @@
 .initial-image {
   margin-top: 0px;
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1180px) {
     width: 100%;
     margin-bottom: 0px;
     padding: 0px;
@@ -39,7 +39,7 @@
   padding: 0px 30px;
   width: 100%;
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1180px) {
     height: max-content;
     flex: none;
     padding: 0px;
@@ -53,7 +53,7 @@
     font-size: 15px;
     font-weight: 400;
 
-    @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 1180px) {
       background-color: unset;
       font-style: italic;
       color: #759242;
@@ -67,7 +67,7 @@
     font-size: 15px;
     font-weight: 400;
 
-    @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 1180px) {
       background-color: unset;
       color: #759242;
     }
@@ -135,6 +135,11 @@
     padding: 0px 80px 10px 80px;
     gap: 16px;
   }
+
+  @media only screen and (min-width: 1180px) {
+    padding: 0px 10px 10px;
+    gap: 16px;
+  }
 }
 
 .media-title {
@@ -147,7 +152,7 @@
   width: 100%;
   max-width: 500px;
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1180px) {
     max-width: 1120px;
     padding: 0px;
   }
@@ -163,7 +168,7 @@
   padding: 0px 30px;
   margin: 30px 0px 70px 0px;
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1180px) {
     max-width: 1120px;
     padding: 0px;
   }
@@ -193,7 +198,7 @@
   align-items: center;
   gap: 10px;
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: row;
     justify-content: center;
     max-width: 1120px;

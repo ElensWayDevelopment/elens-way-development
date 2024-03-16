@@ -136,7 +136,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe(['(min-width: 1280px)'])
+      .observe(['(min-width: 1180px)'])
       .subscribe((state: BreakpointState) => {
         this.isDesktop = state.matches;
       });
