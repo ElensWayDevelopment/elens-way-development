@@ -6,14 +6,14 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { CommonModule, ViewportScroller } from '@angular/common';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { NavigationItemWithLink } from './main-page.types';
 import {
   BreakpointObserver,
   BreakpointState,
   LayoutModule
 } from '@angular/cdk/layout';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { NavigationItemWithLink } from './main-page.types';
 
 @Component({
   selector: 'app-root',

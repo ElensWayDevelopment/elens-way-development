@@ -3,7 +3,12 @@ import {
   BreakpointState,
   LayoutModule
 } from '@angular/cdk/layout';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
@@ -58,13 +63,17 @@ export class MainPageComponent implements OnInit {
     }
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.breakpointObserver
       .observe(['(min-width: 1180px)'])
       .subscribe((state: BreakpointState) => {
         this.isDesktop = state.matches;
+        this.cd.detectChanges();
       });
   }
 

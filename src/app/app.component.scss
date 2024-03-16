@@ -96,8 +96,12 @@
 .desktop-navigation {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   height: 100%;
+
+  @media only screen and (min-width: 1280px) {
+    gap: 50px;
+  }
 }
 
 .toolbar-title {
@@ -127,8 +131,12 @@
   bottom: 0;
   z-index: 100;
 
-  @media only screen and (min-width: 1180px) {
+  @media only screen and (min-width: 1280px) {
     padding: 0px 80px;
+  }
+
+  @media only screen and (min-width: 1180px) {
+    padding: 0px 40px;
   }
 
   .menu-icon {
