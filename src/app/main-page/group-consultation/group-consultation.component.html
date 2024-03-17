@@ -1,15 +1,20 @@
 <div class="colored-card" [ngClass]="{ 'desktop-card': isDesktop }">
-  <span
-    class="colored-card-title colored-card-text__without-margin text-with-offset text-with-offset__left"
-    >{{
-      mediate
-        ? 'Медиаторство и сопровождение на переговорах'
-        : 'Групповое обучение для руководителей и команд'
-    }}</span
-  >
+  @if (!mediate) {
+    <span
+      class="colored-card-title colored-card-text__without-margin text-with-offset text-with-offset__left"
+      >Групповое обучение для руководителей <br />и команд</span
+    >
+  } @else {
+    <span
+      class="colored-card-title colored-card-text__without-margin text-with-offset text-with-offset__left">
+      Медиаторство <br />и сопровождение <br />на переговорах</span
+    >
+  }
+
   <div>
     @if (!mediate) {
-      <p class="colored-card-text text-with-offset">
+      <p
+        class="colored-card-text text-with-offset colored-card-text__align-left">
         Как психолог и предприниматель, я уверена — бизнес соткан из отношений:
         с клиентом, с руководителем, с подчиненными, с вертикальными коллегами и
         даже отношений с самим собой в рамках профессиональной роли. В этих
@@ -17,14 +22,15 @@
       </p>
 
       <p
-        class="colored-card-text colored-card-text__without-margin text-with-offset">
+        class="colored-card-text colored-card-text__without-margin text-with-offset colored-card-text__align-left">
         Поэтому важно учиться строить многообразие этих отношений надежно. Если
         вашим управленцам или команде нужны знания и инструменты по
         коммуникациям и развитию эмоционального интеллекта, я могу написать
         программу или лекцию индивидуально под ваш запрос.
       </p>
     } @else {
-      <p class="colored-card-text text-with-offset">
+      <p
+        class="colored-card-text text-with-offset colored-card-text__align-left">
         Я также оказываю услуги по сопровождению ваших интересов на переговорах
         и медиаторские услуги по решению конфликтов в бизнесе. В сложных
         чувствах непросто быть эмоциональным адвокатом самому себе и трезво
@@ -32,13 +38,13 @@
       </p>
 
       <p
-        class="colored-card-text colored-card-text__without-margin text-with-offset">
+        class="colored-card-text colored-card-text__without-margin text-with-offset colored-card-text__align-left">
         Эту часть эмоциональной работы можно делегировать. Я буду рада быть для
         вас поддержкой в кризисном этапе жизни и найти лучшее решение win-win.
       </p>
 
       <p
-        class="colored-card-text colored-card-text__without-bottom-margin text-with-offset">
+        class="colored-card-text colored-card-text__without-bottom-margin text-with-offset colored-card-text__align-left">
         Здорово, когда кризисы развивают, а не разрушают.
       </p>
     }

@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class PodcastComponent {
   @Input() isDesktop = true;
 
-  openLink(link: string): void {
-    window.open(link, '_self');
+  openLink(link: string, targetBlank = false): void {
+    window.open(link, targetBlank ? '_blank' : '_self');
   }
 }

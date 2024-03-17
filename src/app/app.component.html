@@ -36,24 +36,26 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="toolbar" id="toolbar">
-      <h1 class="toolbar-title" [routerLink]="'/'">Елена Мицкевич</h1>
-      @if (!isDesktop) {
-        <mat-icon
-          class="menu-icon"
-          svgIcon="hamburger-4"
-          (click)="sidenav.toggle()">
-        </mat-icon>
-      } @else {
-        <div class="desktop-navigation">
-          @for (menuItem of menuItems; track menuItem) {
-            <span
-              class="menu-title"
-              (click)="navigateToLink(menuItem, sidenav)"
-              >{{ menuItem.shortName }}</span
-            >
-          }
-        </div>
-      }
+      <div class="toolbar-content">
+        <h1 class="toolbar-title" [routerLink]="'/'">Елена Мицкевич</h1>
+        @if (!isDesktop) {
+          <mat-icon
+            class="menu-icon"
+            svgIcon="hamburger-4"
+            (click)="sidenav.toggle()">
+          </mat-icon>
+        } @else {
+          <div class="desktop-navigation">
+            @for (menuItem of menuItems; track menuItem) {
+              <span
+                class="menu-title"
+                (click)="navigateToLink(menuItem, sidenav)"
+                >{{ menuItem.shortName }}</span
+              >
+            }
+          </div>
+        }
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
