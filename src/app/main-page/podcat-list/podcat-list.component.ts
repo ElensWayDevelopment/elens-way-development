@@ -26,17 +26,17 @@ export class PodcatListComponent {
       image: './assets/podcast-2.jpeg'
     },
     {
-      name: 're-feel podcast: Любовь к себе. С чего она начинается и как ее развить?',
+      name: 're-feel podcast: Любовь к себе. \nС чего она начинается и как ее развить?',
       url: 'https://re-feel.mave.digital/ep-15',
       image: './assets/podcast-3.jpeg'
     },
     {
-      name: 'Богема и маркетинг: О переживаниях предпринимателя',
+      name: 'Богема и маркетинг: \nО переживаниях предпринимателя',
       url: 'https://bogema.mave.digital/ep-55',
       image: './assets/podcast-4.jpeg'
     },
     {
-      name: 'Artcoin: Как найти новые смыслы в творчестве',
+      name: 'Artcoin: Как найти новые смыслы \nв творчестве',
       url: 'https://artcoin.mave.digital/ep-44',
       image: './assets/podcast-5.jpeg'
     },
