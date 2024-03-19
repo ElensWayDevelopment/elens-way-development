@@ -156,9 +156,14 @@ path {
 }
 
 .colored-card-text {
-  text-align: justify;
-  font-size: 18px;
+  text-align: left;
+  font-size: 16px;
   width: 100%;
+
+  @media only screen and (min-width: 1180px) {
+    font-size: 18px;
+    text-align: justify;
+  }
 
   &__with-background {
     background-color: #ffffff;
@@ -202,6 +207,14 @@ path {
 
 ul {
   padding-left: 30px;
+}
+
+li {
+  font-size: 16px;
+
+  @media only screen and (min-width: 1180px) {
+    font-size: 18px;
+  }
 }
 
 .li-with-offset {
