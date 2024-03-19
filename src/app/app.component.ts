@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
       name: `Портал психологов
       «Ты — это важно»`,
       link: 'portals',
-      shortName: 'Портал',
+      shortName: 'Портал с психологами',
       isRouterNavigation: true
     },
     {

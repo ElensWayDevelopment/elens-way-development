@@ -68,7 +68,7 @@ path {
 
   @media only screen and (min-width: 1180px) {
     max-width: unset;
-    width: 380px;
+    width: 375px;
   }
 
   &__with-padding {
@@ -156,9 +156,10 @@ path {
 }
 
 .colored-card-text {
-  text-align: left;
+  text-align: justify;
   font-size: 16px;
   width: 100%;
+  text-justify: inter-character;
 
   @media only screen and (min-width: 1180px) {
     font-size: 18px;
