@@ -5,8 +5,12 @@
   justify-content: center;
 
   @media only screen and (min-width: 1180px) {
-    height: 740px;
+    height: 780px;
   }
+}
+
+.full-width {
+  width: 100%
 }
 
 .desktop-card {
@@ -27,6 +31,7 @@
     @media only screen and (min-width: 1180px) {
       font-size: 27px;
       font-weight: 700px;
+      min-height: 100px;
     }
   }
 }

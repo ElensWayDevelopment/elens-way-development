@@ -81,12 +81,10 @@
     <app-group-consultation
       id="groupTrainings"
       [isDesktop]="isDesktop"></app-group-consultation>
-    @if (isDesktop) {
-      <app-group-consultation
-        id="mediate"
-        [isDesktop]="isDesktop"
-        [mediate]="true"></app-group-consultation>
-    }
+    <app-group-consultation
+      id="mediate"
+      [isDesktop]="isDesktop"
+      [mediate]="true"></app-group-consultation>
   </div>
 
   <app-education [isDesktop]="isDesktop"></app-education>

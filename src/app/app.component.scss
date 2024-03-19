@@ -98,10 +98,6 @@
   align-items: center;
   gap: 20px;
   height: 100%;
-
-  @media only screen and (min-width: 1280px) {
-    gap: 50px;
-  }
 }
 
 .toolbar-title {

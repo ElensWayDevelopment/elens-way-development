@@ -4,28 +4,51 @@
     >Индивидуальное консультирование</span
   >
 
-  <p
-    class="colored-card-text colored-card-text__without-bottom-margin text-with-offset">
-    <u>Я помогу:</u>
-  </p>
-  <span class="colored-card-text text-with-offset"
-    >— с отношениями с собой</span
-  >
-  <span class="colored-card-text text-with-offset"
-    >— с отношениями с близкими
-  </span>
-  <span class="colored-card-text text-with-offset"
-    >— с проявлением себя в мир</span
-  >
+  @if (isDesktop) {
+    <p class="colored-card-text text-with-offset colored-card-text__align-left">
+      Личная терапия — особенная территория для развития личности.  Это работа с
+      мышлением, знакомство с эмоциями и сигналами собственного тела. Это
+      развитие навыков общения и построение нового поведения для проявление себя
+      в мир.
+    </p>
 
-  <ul class="price-list">
-    <li>60 минут</li>
-    <li>15 000₽ или 150€</li>
-  </ul>
+    <p
+      class="colored-card-text colored-card-text__without-margin text-with-offset colored-card-text__align-left">
+      Но самое главное —это пространство, где вы можете познакомиться и
+      научиться строить отношения с собой. Чуткие и надежные.
+    </p>
+
+    <p
+      class="colored-card-text colored-card-text__without-bottom-margin text-with-offset colored-card-text__align-left">
+      <b>Продолжительность сессии — 60 минут</b>
+    </p>
+    <p
+      class="colored-card-text colored-card-text__without-top-margin text-with-offset colored-card-text__align-left">
+      <b>Стоимость: 15000₽ или 150€.</b>
+    </p>
+  } @else {
+    <p class="colored-card-text text-with-offset colored-card-text__align-left">
+      Личная терапия — особенная территория для развития вашей личности.
+    </p>
+
+    <p
+      class="colored-card-text colored-card-text__without-margin text-with-offset colored-card-text__align-left">
+      Это работа с мышлением, эмоциями и сигналами собственного тела. Это
+      развитие навыков общения и нового поведения. Это возможность познакомиться
+      и научиться строить отношения с собой. Чуткие и надежные.
+    </p>
+
+    <ul style="margin-left: 15px; margin-right: 15px">
+      <li style="font-size: 18px">
+        <b>Продолжительность сессии — 60 минут</b>
+      </li>
+      <li style="font-size: 18px"><b>Стоимость: 15000₽ или 150€.</b></li>
+    </ul>
+  }
 
   <p
-    class="colored-card-text colored-card-text__without-margin text-with-offset">
-    Свободное время и даты уточняйте в Telegram
+    class="colored-card-text colored-card-text__without-margin text-with-offset colored-card-text__align-left">
+    Свободное время и даты уточняйте в Telegram.
   </p>
 
   <button
