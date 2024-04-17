@@ -15,6 +15,11 @@ export class PodcatListComponent {
   @Input() isDesktop = true;
 
   podcastList = [
+    // {
+    //   name: 'Как развить эмоциональный интеллект — Сергей Мезенцев',
+    //   url: 'https://www.youtube.com/watch?v=bdP7Q9N2tzM',
+    //   image: './assets/podcast-1.jpeg'
+    // },
     {
       name: 'Почему женщины одиноки? Причины расставания и как его пережить? — Юлия Черных',
       url: 'https://www.youtube.com/watch?v=sRmVGyASrLs',
