@@ -84,6 +84,10 @@ export class AppComponent implements OnInit {
         './assets/arrow-right.svg'
       )
     );
+    this.matIconRegistry.addSvgIcon(
+      'headset',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/headset.svg')
+    );
 
     viewport.setOffset([0, 100]);
   }
